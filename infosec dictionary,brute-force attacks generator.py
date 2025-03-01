@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[10]:
 
 
 import tkinter as tk
@@ -9,10 +8,10 @@ from tkinter import messagebox, ttk
 import itertools
 import string
 
-# Hardcoded correct password
+
 CORRECT_PASSWORD = "anita"
 
-# Read the dictionary file
+
 def load_dictionary(file_path):
     with open(file_path, "r") as file:
         return [line.strip() for line in file]
@@ -31,7 +30,7 @@ def dictionary_attack(username):
 def brute_force_attack():
     chars = string.ascii_letters  # A-Z, a-z
     attempts = 0
-    for length in range(1, 6):  # Up to 5 characters
+    for length in range(1, 6): 
         for attempt in itertools.product(chars, repeat=length):
             attempts += 1
             if ''.join(attempt) == CORRECT_PASSWORD:
@@ -91,13 +90,6 @@ footer_label.pack(side="bottom", pady=10)
 root.mainloop()
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
